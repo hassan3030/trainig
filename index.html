@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    <button onchange="clickNow()" >
+        Click me
+    </button>
+    <br>
+    <p > help me now </p>
+    <input type="text" onchange="clickNow()">
+    <button onclick ="sortArray()" >
+        sortArray
+    </button>
+    <button onclick ="showProm()" >
+        showProm
+    </button>
+    <button onclick ="setTime()" >
+        setTime
+    </button>
+    <button onclick ="openurl()" >
+        openurl
+    </button>
+    <h1 class = "train"> training </h1> 
+    <button onclick ="changStyles()" >
+        chang style
+    </button>
+    <br>
+    <button onclick ="display(this)" > display ==>> </button>
+    <script>
+      function  display($event) { console.log("'e.target'")}
+      function clickNow(){
+        alert("hello mr : hassan")
+        }
+        function sortSimpleArray(a,b){
+            return b-a ;
+        }
+        function sortArray(){
+            var arr =[15 ,265,98,1,8,65,48,25,54,44];
+            console.log(arr);
+           var x = arr.sort(sortSimpleArray);
+            console.log(x);
+        }
+        function show(){
+            var i = 0 ;
+          var confirmation = confirm("show another");
+          if(confirmation == true ){confirm(`show another ${i++}`);}
+        }
+        function showProm(){
+            var i = prompt("show another");
+            confirm(i);
+          // if(confirmation == true ){confirm(`show another ${i++}`);}
+        }
+        function setTime(){
+            var n = 0 ;
+            setInterval(()=>{  console.log(n) ; n++ } , 1000);
+         }
+         function openurl(){
+            open("https://www.w3schools.com/js/js_promise.asp" , "hassan");
+         }
+         function changStyles(){
+            let cook = document.cookie = "color = red ; expires=Thu, 18 Dec 2013 12:00:00 UTC; path=/ ";
+            document.querySelector(".train").innerText = "hello";
+            document.querySelector(".train").style.color = getCookie("color");
+
+         }
+    </script>
+</body>
+</html>
