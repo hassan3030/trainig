@@ -1,0 +1,2 @@
+# trainig
+help yourselv
